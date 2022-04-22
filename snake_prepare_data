@@ -1,0 +1,50 @@
+#%%
+import os
+import subprocess
+
+import numpy as np
+
+DATAFOLDER = config['datafolder']
+OUTFOLDER = config['outfolder']
+DATASET = config['dataset']
+MODEL = config['model']
+TARGET = config['target']
+SPLIT_ID = config['split_id']
+
+LAYERS = [config[k] for k in config.keys() if k.startswith('layer')]
+LAYERS_CONCAT = "_".join(LAYERS)
+LAYERS_SPACED = " ".join(LAYERS)
+
+CV_N = 10
+CV_K = 5
+
+old_target = TARGET
+try:
+    RANDOM = config['random']
+    if RANDOM == 'true':
+        TARGET = TARGET + '_random'
+
+except:
+    pass
+
+cn = "0 1 2 3 4 5 6 7 8 9"
+ck = "0 1 2 3 4"
+
+#rule all:
+#    input:
+#        expand("{outfolder}/{dataset}/{target}/{model}/{split_id}/rSNF/INF_{layers}_tr_{cv_n}_{cv_k}.txt", 
+#            outfolder=OUTFOLDER, dataset=DATASET, target=TARGET, model=MODEL, layers=LAYERS_CONCAT, split_id=SPLIT_ID, cv_n=cn.split(' '), cv_k=ck.split(' ')),
+
+rule prepare_data_snf:
+    input:
+        data = expand("{datafolder}/{dataset}/{target}/{split_id}/{layer}_tr.txt",
+            datafolder=DATAFOLDER, dataset=DATASET, target=TARGET, split_id=SPLIT_ID, layer=LAYERS),
+        labels = expand("{datafolder}/{dataset}/{target}/{split_id}/labels_{target}_tr.txt", 
+            datafolder=DATAFOLDER, dataset=DATASET, target=TARGET, split_id=SPLIT_ID)
+    output:
+        expand("{datafolder}/{dataset}/{target}/{split_id}/{layer}_tr_{cv_n}_{cv_k}.txt",
+            datafolder=DATAFOLDER, dataset=DATASET, target=TARGET, split_id=SPLIT_ID, layer=LAYERS, cv_n=list(range(CV_N)), cv_k=list(range(CV_K))),
+        expand("{datafolder}/{dataset}/{target}/{split_id}/labels_{target}_tr_{cv_n}_{cv_k}.txt", 
+            datafolder=DATAFOLDER, dataset=DATASET, target=TARGET, split_id=SPLIT_ID, cv_n=list(range(CV_N)), cv_k=list(range(CV_K)))
+    shell:
+        'python prepare_data_snf.py --datafiles {input.data} --labelsfile {input.labels} --cv_k {CV_K} --cv_n {CV_N}'
