@@ -1,0 +1,10 @@
+KeyboardInterrupt in line 5 of C:\Users\tpavo\Documents\GitHub\Test_snf\Test_SNF_snake.
+  File "C:\Users\tpavo\Documents\GitHub\Test_snf\Test_SNF_snake", line 5, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\__init__.py", line 144, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\core\__init__.py", line 78, in <module>
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 975, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_data

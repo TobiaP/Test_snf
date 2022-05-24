@@ -17,7 +17,7 @@ SNAKEFILE=Test_SNF_snake
 
 RANDOM_LABELS=false
 
-for (( i=$N_SPLITS_START; i<$N_SPLITS_END; i++ ))
-do
-	snakemake -s $SNAKEFILE --cores $CORES --config datafolder=$DATAFOLDER outfolder=$OUTFOLDER dataset=$DATASET target=$TARGET layer1=$LAYER1 layer2=$LAYER2 layer3=$LAYER3 model=$MODEL random=$RANDOM_LABELS split_id=$i -r -p
-done
+#for (( i=$N_SPLITS_START; i<$N_SPLITS_END; i++ ))
+#do
+snakemake -s $SNAKEFILE --cores $CORES --config datafolder=$DATAFOLDER outfolder=$OUTFOLDER dataset=$DATASET target=$TARGET layer1=$LAYER1 layer2=$LAYER2 layer3=$LAYER3 model=$MODEL random=$RANDOM_LABELS split_id=$N_SPLITS_START -r -p
+#done

@@ -4,7 +4,7 @@
 import os
 import random
 
-def subsample(paths, cv_n, cv_k):
+def subsample(paths, cv_n=10, cv_k=5, nfeats=500):
     
     for path_in in paths: 
         file = open(path_in)      # choice of random list of layers, max 500
@@ -12,7 +12,7 @@ def subsample(paths, cv_n, cv_k):
         b = a.split()
         file.close()
         num_layers = len(b)
-        layers = random.sample(range(1, num_layers), min(num_layers-1, 500))
+        layers = random.sample(range(1, num_layers), min(num_layers-1, nfeats))
         layers.append(0)
         layers.sort()
         

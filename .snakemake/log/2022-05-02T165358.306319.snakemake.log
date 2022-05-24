@@ -1,0 +1,4 @@
+KeyboardInterrupt in line 5 of C:\Users\tpavo\Documents\GitHub\Test_snf\Test_SNF_snake.
+  File "C:\Users\tpavo\Documents\GitHub\Test_snf\Test_SNF_snake", line 5, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\__init__.py", line 349, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\__init__.py", line 339, in _sanity_check

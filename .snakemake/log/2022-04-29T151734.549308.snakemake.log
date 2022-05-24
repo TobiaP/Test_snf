@@ -1,0 +1,133 @@
+Building DAG of jobs...
+The code used to generate one or several output files has changed:
+    To inspect which output files have changes, run 'snakemake --list-code-changes'.
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count    min threads    max threads
+-----------  -------  -------------  -------------
+Compare_snf       17              8              8
+all                1              1              1
+total             18              1              8
+
+Select jobs to execute...
+
+[Fri Apr 29 15:17:37 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_4_1.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff4_1.txt
+    jobid: 43
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff4_1.txt
+    wildcards: cv_n=4, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff4_1.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_4_1.txt --CLUST spectral --CLUSTINFO False --THREADS 8
+[Fri Apr 29 15:17:42 2022]
+Finished job 43.
+1 of 18 steps (6%) done
+Select jobs to execute...
+
+[Fri Apr 29 15:17:42 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_3.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff9_3.txt
+    jobid: 97
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff9_3.txt
+    wildcards: cv_n=9, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff9_3.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_3.txt --CLUST spectral --CLUSTINFO False --THREADS 8
+[Fri Apr 29 15:17:44 2022]
+Finished job 97.
+2 of 18 steps (11%) done
+Select jobs to execute...
+
+[Fri Apr 29 15:17:44 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_4_2.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff4_2.txt
+    jobid: 45
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff4_2.txt
+    wildcards: cv_n=4, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff4_2.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_4_2.txt --CLUST spectral --CLUSTINFO False --THREADS 8
+[Fri Apr 29 15:17:47 2022]
+Finished job 45.
+3 of 18 steps (17%) done
+Select jobs to execute...
+
+[Fri Apr 29 15:17:47 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_2_0.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff2_0.txt
+    jobid: 21
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff2_0.txt
+    wildcards: cv_n=2, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff2_0.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_2_0.txt --CLUST spectral --CLUSTINFO False --THREADS 8
+[Fri Apr 29 15:17:49 2022]
+Finished job 21.
+4 of 18 steps (22%) done
+Select jobs to execute...
+
+[Fri Apr 29 15:17:49 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_1.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff9_1.txt
+    jobid: 93
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff9_1.txt
+    wildcards: cv_n=9, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff9_1.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_1.txt --CLUST spectral --CLUSTINFO False --THREADS 8
+[Fri Apr 29 15:17:51 2022]
+Finished job 93.
+5 of 18 steps (28%) done
+Select jobs to execute...
+
+[Fri Apr 29 15:17:51 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_6_2.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff6_2.txt
+    jobid: 65
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff6_2.txt
+    wildcards: cv_n=6, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff6_2.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_6_2.txt --CLUST spectral --CLUSTINFO False --THREADS 8
+[Fri Apr 29 15:17:53 2022]
+Finished job 65.
+6 of 18 steps (33%) done
+Select jobs to execute...
+
+[Fri Apr 29 15:17:53 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_8_0.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff8_0.txt
+    jobid: 81
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff8_0.txt
+    wildcards: cv_n=8, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff8_0.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_8_0.txt --CLUST spectral --CLUSTINFO False --THREADS 8
+[Fri Apr 29 15:17:54 2022]
+Error in rule Compare_snf:
+    jobid: 81
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff8_0.txt
+    shell:
+        python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff8_0.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_8_0.txt --CLUST spectral --CLUSTINFO False --THREADS 8
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Terminating processes on user request, this might take some time.
+The code used to generate one or several output files has changed:
+    To inspect which output files have changes, run 'snakemake --list-code-changes'.
+Complete log: .snakemake\log\2022-04-29T151734.549308.snakemake.log

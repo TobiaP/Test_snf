@@ -61,7 +61,6 @@ estimateNumberOfClustersGivenGraph <- function(W, NUMC=2:5) {
       # end MC edit
       EigenvectorsDiscrete <- .discretisation(UU)[[1]]
       EigenVectors = EigenvectorsDiscrete^2
-      
       # MATLAB: sort(EigenVectors,2, 'descend');
       temp1 <- EigenVectors[do.call(order, lapply(1:ncol(EigenVectors), function(i) EigenVectors[, i])), ]
       temp1 <- t(apply(temp1, 1, sort, TRUE))  

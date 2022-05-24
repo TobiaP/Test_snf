@@ -1,0 +1,787 @@
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count    min threads    max threads
+-----------  -------  -------------  -------------
+Compare_snf       50              8              8
+all                1              1              1
+snf               50              8              8
+total            101              1              8
+
+Select jobs to execute...
+
+[Thu Apr 28 22:13:59 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_1_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_1_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_1_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_1_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_1_4.txt
+    jobid: 20
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_1_4.txt
+    wildcards: cv_n=1, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:02 2022]
+Finished job 20.
+1 of 101 steps (1%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:02 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_4_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_4_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_4_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_4_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_4.txt
+    jobid: 50
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_4.txt
+    wildcards: cv_n=4, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:06 2022]
+Finished job 50.
+2 of 101 steps (2%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:06 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_5_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_5_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_5_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_5_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_5_4.txt
+    jobid: 60
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_5_4.txt
+    wildcards: cv_n=5, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:09 2022]
+Finished job 60.
+3 of 101 steps (3%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:09 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_3_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_3_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_3_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_3_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_4.txt
+    jobid: 40
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_4.txt
+    wildcards: cv_n=3, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:12 2022]
+Finished job 40.
+4 of 101 steps (4%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:12 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_6_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_6_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_6_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_6_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_4.txt
+    jobid: 70
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_4.txt
+    wildcards: cv_n=6, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:15 2022]
+Finished job 70.
+5 of 101 steps (5%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:15 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_0_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_0_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_0_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_0_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_4.txt
+    jobid: 10
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_4.txt
+    wildcards: cv_n=0, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:18 2022]
+Finished job 10.
+6 of 101 steps (6%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:18 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_8_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_8_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_8_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_8_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_4.txt
+    jobid: 90
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_4.txt
+    wildcards: cv_n=8, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:21 2022]
+Finished job 90.
+7 of 101 steps (7%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:21 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_7_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_7_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_7_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_7_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_4.txt
+    jobid: 80
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_4.txt
+    wildcards: cv_n=7, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:24 2022]
+Finished job 80.
+8 of 101 steps (8%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:24 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_9_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_9_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_9_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_4.txt
+    jobid: 100
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_4.txt
+    wildcards: cv_n=9, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:27 2022]
+Finished job 100.
+9 of 101 steps (9%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:27 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_2_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_2_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_2_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_2_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_4.txt
+    jobid: 30
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_4.txt
+    wildcards: cv_n=2, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:31 2022]
+Finished job 30.
+10 of 101 steps (10%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:31 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_2_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_2_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_2_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_2_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_2.txt
+    jobid: 26
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_2.txt
+    wildcards: cv_n=2, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:34 2022]
+Finished job 26.
+11 of 101 steps (11%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:34 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_3_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_3_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_3_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_3_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_3.txt
+    jobid: 38
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_3.txt
+    wildcards: cv_n=3, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:37 2022]
+Finished job 38.
+12 of 101 steps (12%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:37 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_8_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_8_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_8_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_8_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_0.txt
+    jobid: 82
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_0.txt
+    wildcards: cv_n=8, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:39 2022]
+Finished job 82.
+13 of 101 steps (13%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:39 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_7_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_7_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_7_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_7_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_2.txt
+    jobid: 76
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_2.txt
+    wildcards: cv_n=7, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:42 2022]
+Finished job 76.
+14 of 101 steps (14%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:42 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_6_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_6_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_6_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_6_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_2.txt
+    jobid: 66
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_2.txt
+    wildcards: cv_n=6, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:44 2022]
+Finished job 66.
+15 of 101 steps (15%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:44 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_4_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_4_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_4_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_4_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_3.txt
+    jobid: 48
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_3.txt
+    wildcards: cv_n=4, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:47 2022]
+Finished job 48.
+16 of 101 steps (16%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:47 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_1_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_1_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_1_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_1_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_1_1.txt
+    jobid: 14
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_1_1.txt
+    wildcards: cv_n=1, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:49 2022]
+Finished job 14.
+17 of 101 steps (17%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:49 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_9_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_9_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_9_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_2.txt
+    jobid: 96
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_2.txt
+    wildcards: cv_n=9, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:52 2022]
+Finished job 96.
+18 of 101 steps (18%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:52 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_0_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_0_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_0_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_0_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_1.txt
+    jobid: 4
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_1.txt
+    wildcards: cv_n=0, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:55 2022]
+Finished job 4.
+19 of 101 steps (19%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:55 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_5_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_5_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_5_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_5_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_5_2.txt
+    jobid: 56
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_5_2.txt
+    wildcards: cv_n=5, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:14:57 2022]
+Finished job 56.
+20 of 101 steps (20%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:14:57 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_6_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_6_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_6_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_6_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_0.txt
+    jobid: 62
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_0.txt
+    wildcards: cv_n=6, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:00 2022]
+Finished job 62.
+21 of 101 steps (21%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:00 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_7_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_7_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_7_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_7_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_0.txt
+    jobid: 72
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_0.txt
+    wildcards: cv_n=7, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:03 2022]
+Finished job 72.
+22 of 101 steps (22%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:03 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_9_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_9_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_9_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_1.txt
+    jobid: 94
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_1.txt
+    wildcards: cv_n=9, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:06 2022]
+Finished job 94.
+23 of 101 steps (23%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:06 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_3_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_3_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_3_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_3_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_2.txt
+    jobid: 36
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_2.txt
+    wildcards: cv_n=3, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:09 2022]
+Finished job 36.
+24 of 101 steps (24%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:09 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_5_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_5_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_5_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_5_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_5_1.txt
+    jobid: 54
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_5_1.txt
+    wildcards: cv_n=5, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:11 2022]
+Finished job 54.
+25 of 101 steps (25%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:11 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_0_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_0_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_0_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_0_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_0.txt
+    jobid: 2
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_0.txt
+    wildcards: cv_n=0, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:14 2022]
+Finished job 2.
+26 of 101 steps (26%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:14 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_8_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_8_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_8_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_8_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_1.txt
+    jobid: 84
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_1.txt
+    wildcards: cv_n=8, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:16 2022]
+Finished job 84.
+27 of 101 steps (27%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:16 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_9_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_9_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_9_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_0.txt
+    jobid: 92
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_0.txt
+    wildcards: cv_n=9, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:19 2022]
+Finished job 92.
+28 of 101 steps (28%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:19 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_2_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_2_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_2_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_2_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_1.txt
+    jobid: 24
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_1.txt
+    wildcards: cv_n=2, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:21 2022]
+Finished job 24.
+29 of 101 steps (29%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:21 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_4_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_4_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_4_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_4_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_0.txt
+    jobid: 42
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_0.txt
+    wildcards: cv_n=4, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:24 2022]
+Finished job 42.
+30 of 101 steps (30%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:24 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_2_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_2_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_2_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_2_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_0.txt
+    jobid: 22
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_0.txt
+    wildcards: cv_n=2, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:26 2022]
+Finished job 22.
+31 of 101 steps (31%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:26 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_7_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_7_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_7_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_7_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_1.txt
+    jobid: 74
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_1.txt
+    wildcards: cv_n=7, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:29 2022]
+Finished job 74.
+32 of 101 steps (32%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:29 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_0_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_0_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_0_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_0_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_3.txt
+    jobid: 8
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_3.txt
+    wildcards: cv_n=0, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:32 2022]
+Finished job 8.
+33 of 101 steps (33%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:32 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_8_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_8_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_8_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_8_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_2.txt
+    jobid: 86
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_2.txt
+    wildcards: cv_n=8, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:36 2022]
+Finished job 86.
+34 of 101 steps (34%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:36 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_6_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_6_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_6_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_6_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_1.txt
+    jobid: 64
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_1.txt
+    wildcards: cv_n=6, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:38 2022]
+Finished job 64.
+35 of 101 steps (35%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:38 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_1_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_1_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_1_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_1_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_1_0.txt
+    jobid: 12
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_1_0.txt
+    wildcards: cv_n=1, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:41 2022]
+Finished job 12.
+36 of 101 steps (36%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:41 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_1_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_1_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_1_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_1_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_1_3.txt
+    jobid: 18
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_1_3.txt
+    wildcards: cv_n=1, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:43 2022]
+Finished job 18.
+37 of 101 steps (37%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:43 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_4_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_4_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_4_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_4_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_1.txt
+    jobid: 44
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_1.txt
+    wildcards: cv_n=4, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:46 2022]
+Finished job 44.
+38 of 101 steps (38%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:46 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_5_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_5_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_5_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_5_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_5_3.txt
+    jobid: 58
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_5_3.txt
+    wildcards: cv_n=5, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:48 2022]
+Finished job 58.
+39 of 101 steps (39%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:48 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_0_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_0_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_0_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_0_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_2.txt
+    jobid: 6
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_2.txt
+    wildcards: cv_n=0, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:51 2022]
+Finished job 6.
+40 of 101 steps (40%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:51 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_8_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_8_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_8_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_8_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_3.txt
+    jobid: 88
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_8_3.txt
+    wildcards: cv_n=8, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:53 2022]
+Finished job 88.
+41 of 101 steps (41%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:53 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_9_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_9_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_9_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_3.txt
+    jobid: 98
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_3.txt
+    wildcards: cv_n=9, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:56 2022]
+Finished job 98.
+42 of 101 steps (42%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:56 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_2_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_2_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_2_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_2_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_3.txt
+    jobid: 28
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_3.txt
+    wildcards: cv_n=2, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:15:58 2022]
+Finished job 28.
+43 of 101 steps (43%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:15:58 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_7_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_7_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_7_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_7_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_3.txt
+    jobid: 78
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_3.txt
+    wildcards: cv_n=7, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:16:01 2022]
+Finished job 78.
+44 of 101 steps (44%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:16:01 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_3_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_3_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_3_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_3_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_0.txt
+    jobid: 32
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_0.txt
+    wildcards: cv_n=3, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:16:05 2022]
+Finished job 32.
+45 of 101 steps (45%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:16:05 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_5_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_5_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_5_0.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_5_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_5_0.txt
+    jobid: 52
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_5_0.txt
+    wildcards: cv_n=5, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:16:07 2022]
+Finished job 52.
+46 of 101 steps (46%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:16:07 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_4_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_4_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_4_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_4_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_2.txt
+    jobid: 46
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_4_2.txt
+    wildcards: cv_n=4, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:16:11 2022]
+Finished job 46.
+47 of 101 steps (47%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:16:11 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_3_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_3_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_3_1.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_3_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_1.txt
+    jobid: 34
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_1.txt
+    wildcards: cv_n=3, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:16:13 2022]
+Finished job 34.
+48 of 101 steps (48%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:16:13 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_6_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_6_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_6_3.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_6_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_3.txt
+    jobid: 68
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_3.txt
+    wildcards: cv_n=6, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:16:16 2022]
+Finished job 68.
+49 of 101 steps (49%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:16:16 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/gene_tr_1_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/meth_tr_1_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/mirna_tr_1_2.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_1_2.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_1_2.txt
+    jobid: 16
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_1_2.txt
+    wildcards: cv_n=1, cv_k=2
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+[Thu Apr 28 22:16:18 2022]
+Finished job 16.
+50 of 101 steps (50%) done
+Select jobs to execute...
+
+[Thu Apr 28 22:16:18 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_0_4.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff0_4.txt
+    jobid: 9
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff0_4.txt; Input files updated by another job: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_4.txt
+    wildcards: cv_n=0, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff0_4.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_0_4.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+[Thu Apr 28 22:16:21 2022]
+Error in rule Compare_snf:
+    jobid: 9
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff0_4.txt
+    shell:
+        python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff0_4.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_0_4.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job Compare_snf since they might be corrupted:
+C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff0_4.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake\log\2022-04-28T221358.160640.snakemake.log
