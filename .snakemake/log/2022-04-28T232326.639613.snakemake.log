@@ -1,0 +1,113 @@
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count    min threads    max threads
+-----------  -------  -------------  -------------
+Compare_snf       23              8              8
+all                1              1              1
+total             24              1              8
+
+Select jobs to execute...
+
+[Thu Apr 28 23:23:27 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_6_0.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_6_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff6_0.txt
+    jobid: 61
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff6_0.txt
+    wildcards: cv_n=6, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff6_0.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_6_0.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+[Thu Apr 28 23:23:29 2022]
+Finished job 61.
+1 of 24 steps (4%) done
+Select jobs to execute...
+
+[Thu Apr 28 23:23:29 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_0.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_9_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff9_0.txt
+    jobid: 91
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff9_0.txt
+    wildcards: cv_n=9, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff9_0.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_9_0.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+[Thu Apr 28 23:23:30 2022]
+Finished job 91.
+2 of 24 steps (8%) done
+Select jobs to execute...
+
+[Thu Apr 28 23:23:30 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_0_0.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_0_0.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff0_0.txt
+    jobid: 1
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff0_0.txt
+    wildcards: cv_n=0, cv_k=0
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff0_0.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_0_0.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+[Thu Apr 28 23:23:32 2022]
+Finished job 1.
+3 of 24 steps (12%) done
+Select jobs to execute...
+
+[Thu Apr 28 23:23:32 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_3_3.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_3_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff3_3.txt
+    jobid: 37
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff3_3.txt
+    wildcards: cv_n=3, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff3_3.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_3_3.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+[Thu Apr 28 23:23:34 2022]
+Finished job 37.
+4 of 24 steps (17%) done
+Select jobs to execute...
+
+[Thu Apr 28 23:23:34 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_7_3.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_7_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff7_3.txt
+    jobid: 77
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff7_3.txt
+    wildcards: cv_n=7, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff7_3.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_7_3.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+[Thu Apr 28 23:23:35 2022]
+Finished job 77.
+5 of 24 steps (21%) done
+Select jobs to execute...
+
+[Thu Apr 28 23:23:35 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_2_3.txt, C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/INF_gene_meth_mirna_tr_2_3.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff2_3.txt
+    jobid: 27
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff2_3.txt
+    wildcards: cv_n=2, cv_k=3
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff2_3.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_2_3.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+[Thu Apr 28 23:23:37 2022]
+Error in rule Compare_snf:
+    jobid: 27
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff2_3.txt
+    shell:
+        python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 0 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/0/rSNF/Diff2_3.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/0/labels_OS_tr_2_3.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Terminating processes on user request, this might take some time.
+Complete log: .snakemake\log\2022-04-28T232326.639613.snakemake.log

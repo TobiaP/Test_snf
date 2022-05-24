@@ -20,6 +20,7 @@ spectralClustering <- function(affinity, K, type=3) {
     Di = diag(1 / sqrt(d))
     NL = Di %*% L %*% Di
   }
+
   eig = eigen(NL)
   res = sort(abs(eig$values),index.return = TRUE)
   U = eig$vectors[,res$ix[1:K]]

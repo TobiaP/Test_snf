@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count    min threads    max threads
+-----------  -------  -------------  -------------
+Compare_snf       50              8              8
+all                1              1              1
+snf               50              8              8
+total            101              1              8
+
+Select jobs to execute...
+
+[Sun May  1 11:14:25 2022]
+rule snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/1/gene_tr_7_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/1/meth_tr_7_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/1/mirna_tr_7_4.txt, C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/1/labels_OS_tr_7_4.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/1/rSNF/INF_gene_meth_mirna_tr_7_4.txt
+    jobid: 80
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/1/rSNF/INF_gene_meth_mirna_tr_7_4.txt
+    wildcards: cv_n=7, cv_k=4
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+Terminating processes on user request, this might take some time.
+Complete log: .snakemake\log\2022-05-01T111424.716637.snakemake.log

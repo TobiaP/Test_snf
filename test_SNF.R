@@ -69,22 +69,67 @@ distL <- lapply(dataL, function(x) (dist2(as.matrix(x), as.matrix(x))))
 
 #distK# Parameters tuning (K, alpha)
 
-#t0 <- now()
-#print(paste(t0, "-- Parameter tuning"))
-#opt_par <- snf_tuning(distL, lab=lab, clm=clustMethod, infocl=clustInfo)
-#K_opt <- opt_par[[1]]
-#alpha_opt <- opt_par[[2]]
-#t1 <- now()
-#print(paste("Done:", time_length(interval(t0, t1), "minute"), "minutes elapsed."))
-#print("Optimal parameters:")
-#print(paste0("K_opt = ", K_opt, "; alpha_opt = ", alpha_opt))
+t0 <- now()
+print(paste(t0, "-- Parameter tuning"))
+opt_par <- snf_tuning(distL, lab=lab, clm=clustMethod, infocl=clustInfo)
+K_opt <- opt_par[[1]]
+alpha_opt <- opt_par[[2]]
+t1 <- now()
+print(paste("Done:", time_length(interval(t0, t1), "minute"), "minutes elapsed."))
+print("Optimal parameters:")
+print(paste0("K_opt = ", K_opt, "; alpha_opt = ", alpha_opt))
 
-K_opt <- 20
-alpha_opt <- 0.5
+# K_opt <- 14
+# alpha_opt <- 0.3
 
 # Similarity graphs
 print(paste(now(), "-- Similarity graphs"))
 affinityL <- lapply(distL, function(x) affinityMatrix(x, K=K_opt, alpha_opt))
+
+# Fuse the graphs
+print(paste(now(), "-- Graph fusion"))
+W = SNF(affinityL, K=K_opt)
+
+# Rescale fused graph
+W_sc <- W/max(W)
+colnames(W_sc) <- rownames(dataF[[1]])
+  
+if (clustMethod=="spectral"){
+  if (clustInfo){
+    # Impose number of clusters (based on true samples labels)
+    nclust <- length(unique(lab))
+    group <-  spectralClustering(W, nclust)
+  } else {
+    print(paste(now(), "-- Estimating number of clusters"))
+    nclust <- estimateNumberOfClustersGivenGraph(W)[[1]]
+    # Spectral clustering
+    print(paste(now(), "-- Spectral clustering"))
+    group <-  spectralClustering(W, nclust)
+  }
+    
+} else if (clustMethod=="fastgreedy"){
+  #Rescale fused graph, so to apply community detection 
+  W_sc <- W/max(W)
+  #Graph from similarity matrix
+  g <- graph.adjacency(W_sc, weighted = TRUE, diag=FALSE, mode='undirected')
+  #Community detection
+  m  <- cluster_fast_greedy(g)
+  if (clustInfo){
+    # Impose number of clusters (based on true samples labels)
+    nclust <- length(unique(lab))
+    group <- cutree(as.hclust(m), nclust)
+    group} else {
+    group <- m$membership
+  }
+}
+
+# Goodness of clustering
+# The closer SNFNMI to 0, the less similar the inferred clusters are to the real ones
+SNFNMI_allfeats <-  calNMI(group, lab)
+
+#output
+
+# Write affinity matrices
 i <- 0
 for (mat in affinityL){
 	matfile <- gsub('.txt', paste("_", toString(i),'_mat.txt',sep=""), outFile)
@@ -92,17 +137,17 @@ for (mat in affinityL){
 	i <- i+1
 }
 
-
-# Fuse the graphs
-print(paste(now(), "-- Graph fusion"))
-W = SNF(affinityL, K=K_opt)
+# Write Snf matrix 
 write.table(cbind(Samples=colnames(W), W), file=outFile, quote=FALSE, sep='\t', row.names=TRUE, col.names=TRUE)
 
-# Rescale fused graph
-W_sc <- W/max(W)
-colnames(W_sc) <- rownames(dataF[[1]])
-  
 # Write fused graph
 outfused <- gsub('.txt', '_similarity_mat_fused.txt', outFile)
 write.table(cbind(Samples=colnames(W_sc), W_sc), file=outfused, quote=FALSE, sep='\t', row.names=FALSE, col.names=TRUE)
 
+# Write out SMI score computed by using all features
+outNMI <- gsub('.txt', '_NMI_score.txt', outFile)
+write.table(c(SNFNMI_allfeats, group, nclust), file=outNMI, quote=FALSE, col.names=FALSE, row.names=FALSE)
+
+# Write opt_K opt_alpha
+outOPT <- gsub('.txt', '_OPT.txt', outFile)
+write.table(c(K_opt, alpha_opt), file=outOPT, quote=FALSE, col.names=FALSE, row.names=FALSE)

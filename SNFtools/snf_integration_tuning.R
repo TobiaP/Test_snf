@@ -11,8 +11,22 @@
 ## You should have received a copy of the GNU General Public License
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # Requires R >= 3.2.3
+
+#Serve a ritornare 
+
+# generateCVRuns -> genera un set di partizioni per un CV e ritorna un vettore
+# viene preso un k-fold alla volta
+# graph.adjacency serve a creare un grafo data una matrice di adiacenza
+# cluster_fast_greedy -> trova sottografi densi dato un grafo pesato
+# as.hclust -> trasforma oggetti da una forma gerarchica di cluster nella classe hclust
+# cutree -> taglia un albero ad altezza lab_k
+
 snf_cv <- function(W, lab, K=5, N=10, clm, infocl){
   median_NMI <- list()
+  #nclust <- estimateNumberOfClustersGivenGraph(W)[[1]]
+  #group_k <- spectralClustering(W, nclust)
+  #median_NMI = calNMI(group_k, lab)
+  #numero di righe
   nSamp <- dim(W)[1]
   SNFNMI_all <- list()
   set.seed(N)
@@ -26,31 +40,30 @@ snf_cv <- function(W, lab, K=5, N=10, clm, infocl){
       idx_k <- cv_folds_current[[l]]
       W_k <- W[idx_k,idx_k]
       # extract the respective labels
-      lab_k <- lab[idx_k]
-      if (clm=="spectral"){
-        if (infocl){
-          nclust <- length(unique(lab))
+        lab_k <- lab[idx_k]
+      #if (clm=="spectral"){
+        #if (infocl){
+        #  nclust <- length(unique(lab))
           # predict clusters for subset k of X
-          group_k <- spectralClustering(W_k, nclust)
-        }else{
-          nclust <- estimateNumberOfClustersGivenGraph(W_k)[[1]]
-          group_k <- spectralClustering(W_k, nclust)
-        }
-      } else if (clm=="fastgreedy") {
-        W_sc_k <- W_k/max(W_k)
-        g_k <- graph.adjacency(W_sc_k, weighted = TRUE, diag=FALSE, mode='undirected')
-        m_k  <- cluster_fast_greedy(g_k)
-        if (infocl){
-          nclust <- length(unique(lab))
-          group_k <- cutree(as.hclust(m_k), nclust)
-        } else {
-          group_k <- m_k$membership  
-        }
-      }
+        #  group_k <- spectralClustering(W_k, nclust)
+        #}else{
+      nclust <- estimateNumberOfClustersGivenGraph(W_k)[[1]]
+      group_k <- spectralClustering(W_k, nclust)
+        #}
+     # } else if (clm=="fastgreedy") {
+      #  W_sc_k <- W_k/max(W_k)
+       # g_k <- graph.adjacency(W_sc_k, weighted = TRUE, diag=FALSE, mode='undirected')
+        #m_k  <- cluster_fast_greedy(g_k)
+        #if (infocl){
+        #  nclust <- length(unique(lab))
+        #  group_k <- cutree(as.hclust(m_k), nclust)
+        #} else {
+        #  group_k <- m_k$membership  
+        #}
+     #  }
       # NMI score
       SNFNMI_K[l] <-  calNMI(group_k, lab_k)
     }
-    
     # median of NMI score for current CV repetition
     median_NMI[nfold] <- median(unlist(SNFNMI_K))
   }
@@ -59,23 +72,35 @@ snf_cv <- function(W, lab, K=5, N=10, clm, infocl){
   return(med_NMI=median_NMI_allrep)
 }
 
+# seq -> crea delle sequenze da min a max di passo step
+# la libreria doParallel viene usata per il foreach
+# %dopar% -> usato dopo il foreach esegue il blocco
+#            successivo per ogni elemento del foreach 
+# per ogni valore di K e alpha viene creata una affinity matrix
+# a partire da distL
+# sull'affinity matrix viene eseguita l'SNF
+# e sulla matrice data dall'SNF si ricava il NMI per tutti i CV
+# vengono cercati tutti gli alpha con NMI maggiore e viene ritornata la lista
+
 ##### generalized (multiview with N>2 views) version #####
 snf_tuning <- function(distL, lab, clm, infocl){
   # min and max K values
-  minK <- 20
+  minK <- 10
   maxK <- 30
-  stepK <- 20
+  stepK <- 1
   K_values <- seq(minK, maxK, stepK)
   
   # min and max alpha values
-  min_alpha <- 0.5
+  min_alpha <- 0.3
   max_alpha <- 0.8
-  step_alpha <- 0.4
+  step_alpha <- 0.05
   alpha_values <- seq(min_alpha, max_alpha, step_alpha)
   
   registerDoParallel(cores=2)
   # for each combination of K and alpha, compute NMI score median over 10x5-CV
-  NMI_tun <- foreach(K=K_values) %do% {foreach(alpha=alpha_values) %do% { 
+  NMI_tun <- foreach(K=K_values) %do% {foreach(alpha=alpha_values) %do% 
+      { 
+        print(K+alpha)
         affinityL <- lapply(distL, function(x) affinityMatrix(x, K=K, alpha))
         W_K <- SNF(affinityL, K=K) 
         med_NMI <- snf_cv(W_K, lab, clm=clm, infocl=infocl)}
@@ -92,7 +117,7 @@ snf_tuning <- function(distL, lab, clm, infocl){
   # Set rownames
   knames <- vector("character")
   ik <- 1
-  for (i in seq(minK,maxK,stepK)){
+  for (i in seq(10,30,1)){
     knames[ik] <- paste('K',i,sep='_')
     ik <- ik+1
   }
@@ -101,7 +126,7 @@ snf_tuning <- function(distL, lab, clm, infocl){
   # Set colnames
   anames <- vector("character")
   ia <- 1
-  for (i in seq(min_alpha,max_alpha,step_alpha)) {
+  for (i in seq(0.3,0.8,0.05)) {
     anames[ia] <- paste('alpha',i,sep='_')
     ia <- ia+1
   }
@@ -119,5 +144,6 @@ snf_tuning <- function(distL, lab, clm, infocl){
   # Find alpha corresponding to max NMI (and previously found K)
   best_alpha_idx <- which.max(NMI_tun[[best_K_idx]])
   best_alpha <- alpha_values[best_alpha_idx]
+  print(tab_median_NMI)
   return(list(best_K=best_K, best_alpha=best_alpha, tab_median_NMI=tab_median_NMI))
 }

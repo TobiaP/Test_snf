@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count    min threads    max threads
+-----------  -------  -------------  -------------
+Compare_snf       40              8              8
+all                1              1              1
+total             41              1              8
+
+Select jobs to execute...
+
+[Thu Apr 28 20:31:57 2022]
+rule Compare_snf:
+    input: C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/1/labels_OS_tr_5_1.txt
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/1/rSNF/Diff5_1.txt
+    jobid: 27
+    reason: Missing output files: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/1/rSNF/Diff5_1.txt
+    wildcards: cv_n=5, cv_k=1
+    threads: 8
+    resources: tmpdir=C:\Users\tpavo\AppData\Local\Temp
+
+python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 1 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/1/rSNF/Diff5_1.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/1/labels_OS_tr_5_1.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+[Thu Apr 28 20:32:01 2022]
+Error in rule Compare_snf:
+    jobid: 27
+    output: C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/1/rSNF/Diff5_1.txt
+    shell:
+        python Compare_SNF.py --DATAFILE C:\Users\tpavo\Desktop\Tirocinio --OUTDIR C:\Users\tpavo\Desktop\Prova\results --DATASET tcga_aml --TARGET OS --SPLIT_ID 1 --LAYERS gene_meth_mirna --MODEL randomForest --OUTFILE C:/Users/tpavo/Desktop/Prova/results/tcga_aml/OS/randomForest/1/rSNF/Diff5_1.txt --LAB C:/Users/tpavo/Desktop/Tirocinio/tcga_aml/OS/1/labels_OS_tr_5_1.txt --CLUST spectral --CLUSTINFO FALSE --THREADS 8
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake\log\2022-04-28T203155.178179.snakemake.log

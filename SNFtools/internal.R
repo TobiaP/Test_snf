@@ -23,13 +23,10 @@
   
   normalize <- function(x) x / sqrt(sum(x^2))
   eigenVectors = t(apply(eigenVectors,1,normalize))
-  
   n = nrow(eigenVectors)
   k = ncol(eigenVectors)
-  
   R = matrix(0,k,k)
   R[,1] = t(eigenVectors[round(n/2),])
-  
   mini <- function(x) {
     i = which(x == min(x))
     return(i[1])
@@ -45,7 +42,6 @@
   lastObjectiveValue = 0
   for (i in 1:20) {
     eigenDiscrete = .discretisationEigenVectorData(eigenVectors %*% R)
-    
     svde = svd(t(eigenDiscrete) %*% eigenVectors)
     U = svde[['u']]
     V = svde[['v']]

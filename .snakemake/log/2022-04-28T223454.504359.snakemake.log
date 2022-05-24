@@ -1,0 +1,9 @@
+KeyboardInterrupt in line 5 of C:\Users\tpavo\Documents\GitHub\Test_snf\Test_SNF_snake.
+  File "C:\Users\tpavo\Documents\GitHub\Test_snf\Test_SNF_snake", line 5, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\__init__.py", line 147, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\lib\__init__.py", line 25, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\lib\index_tricks.py", line 12, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\matrixlib\__init__.py", line 4, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\matrixlib\defmatrix.py", line 11, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\linalg\__init__.py", line 73, in <module>
+  File "C:\Users\tpavo\anaconda3\envs\Test\lib\site-packages\numpy\linalg\linalg.py", line 33, in <module>

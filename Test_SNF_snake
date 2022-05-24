@@ -28,25 +28,25 @@ try:
 except:
     pass
 
-cn = "0 1 2 3 4 5 6 7 8 9"
-ck = "0 1 2 3 4"
+cn = "1 1 2 3 4 5 6 7 8 9"
+ck = "1 1 2 3 4"
 
 rule all:
     input:
-        expand("{outfolder}/{dataset}/{target}/{model}/{split_id}/rSNF/Diff{cv_n}_{cv_k}.txt", 
+        expand("{outfolder}/{dataset}/{target}/{model}/{split_id}/rSNF/Diff1_1.txt", 
             outfolder=OUTFOLDER, dataset=DATASET, target=TARGET, model=MODEL, layers=LAYERS_CONCAT, split_id=SPLIT_ID, cv_n=cn.split(' '), cv_k=ck.split(' ')),
-        #expand("{outfolder}/{dataset}/{target}/{model}/{split_id}/rSNF/INF_{layers}_tr_{cv_n}_{cv_k}.txt", 
+        #expand("{outfolder}/{dataset}/{target}/{model}/{split_id}/rSNF/INF_{layers}_tr_1_1.txt", 
         #    outfolder=OUTFOLDER, dataset=DATASET, target=TARGET, model=MODEL, layers=LAYERS_CONCAT, split_id=SPLIT_ID, cv_n=cn.split(' '), cv_k=ck.split(' '))
 
 rule snf:
     input:
-        dat = expand("{datafolder}/{dataset}/{target}/{split_id}/{layer}_tr_{{cv_n}}_{{cv_k}}.txt", 
+        dat = expand("{datafolder}/{dataset}/{target}/{split_id}/{layer}_tr_1_1.txt", 
             datafolder=DATAFOLDER, dataset=DATASET, target=TARGET, layer=LAYERS, split_id=SPLIT_ID),
-        lab = expand("{datafolder}/{dataset}/{target}/{split_id}/labels_{target}_tr_{{cv_n}}_{{cv_k}}.txt", 
+        lab = expand("{datafolder}/{dataset}/{target}/{split_id}/labels_{target}_tr_1_1.txt", 
             datafolder=DATAFOLDER, dataset=DATASET, target=TARGET, split_id=SPLIT_ID),
     threads: 8
     output:
-        expand("{outfolder}/{dataset}/{target}/{model}/{split_id}/rSNF/INF_{layers}_tr_{{cv_n}}_{{cv_k}}.txt", 
+        expand("{outfolder}/{dataset}/{target}/{model}/{split_id}/rSNF/INF_{layers}_tr_1_1.txt", 
             outfolder=OUTFOLDER, dataset=DATASET, target=TARGET, model=MODEL, layers=LAYERS_CONCAT, split_id=SPLIT_ID)
     run:
         subprocess.call(f"Rscript test_SNF.R --data {input.dat} --lab {input.lab} \
@@ -55,10 +55,12 @@ rule snf:
 
 rule Compare_snf:
     input:
-        lab = expand("{datafolder}/{dataset}/{target}/{split_id}/labels_{target}_tr_{{cv_n}}_{{cv_k}}.txt", 
-        datafolder=DATAFOLDER, dataset=DATASET, target=TARGET, split_id=SPLIT_ID)
+        lab = expand("{datafolder}/{dataset}/{target}/{split_id}/labels_{target}_tr_1_1.txt", 
+        datafolder=DATAFOLDER, dataset=DATASET, target=TARGET, split_id=SPLIT_ID),
+        out = expand("{outfolder}/{dataset}/{target}/{model}/{split_id}/rSNF/INF_{layers}_tr_1_1.txt", 
+            outfolder=OUTFOLDER, dataset=DATASET, target=TARGET, model=MODEL, layers=LAYERS_CONCAT, split_id=SPLIT_ID),
     threads: 8
     output:
-        expand("{outfolder}/{dataset}/{target}/{model}/{split_id}/rSNF/Diff{{cv_n}}_{{cv_k}}.txt", outfolder=OUTFOLDER, dataset=DATASET, target=TARGET, model=MODEL, split_id=SPLIT_ID)
+        expand("{outfolder}/{dataset}/{target}/{model}/{split_id}/rSNF/Diff1_1.txt", outfolder=OUTFOLDER, dataset=DATASET, target=TARGET, model=MODEL, split_id=SPLIT_ID)
     shell: 
-        'python Compare_SNF.py --DATAFILE {DATAFOLDER} --OUTDIR {OUTFOLDER} --DATASET {DATASET} --TARGET {TARGET} --SPLIT_ID {SPLIT_ID} --LAYERS {LAYERS_CONCAT} --MODEL {MODEL} --OUTFILE {output} --LAB {input.lab}'
+        'python Compare_SNF.py --DATAFILE {DATAFOLDER} --OUTDIR {OUTFOLDER} --DATASET {DATASET} --TARGET {TARGET} --SPLIT_ID {SPLIT_ID} --LAYERS {LAYERS_CONCAT} --MODEL {MODEL} --OUTFILE {output} --LAB {input.lab} --CLUST spectral --THREADS {threads}'
